@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>vscode project</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/roll.css">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+
+    <!-- 导航css -->
+    <style>
+        .navbar {
+            background-color: rgb(44, 44, 50);
+            /* position: relative; */
+
+            margin: 0;
+            border: 0;
+        }
+
+        /* .navbar .container-fluid{
+            position: fixed;
+
+        } */
+
+        .navbar-header .navbar-brand {
+            font-size: 20px;
+            color: white;
+
+        }
+
+        .navbar-header .navbar-brand img {
+            float: left;
+            width: 18px;
+            margin-right: 5px;
+        }
+
+        .navbar-header .navbar-brand:hover {
+            color: white;
+
+
+        }
+
+        .collapse {
+            position: relative;
+        }
+
+        .collapse .navbar-form {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 0;
+        }
+
+        .collapse .navbar-form .form-group input {
+            background-color: rgb(82, 82, 87);
+            padding-left: 30px;
+            margin: 0;
+            border: none;
+            height: 50px;
+            border-radius: unset;
+
+        }
+
+        .collapse .navbar-form button {
+            background-color: rgb(0, 91, 164);
+            padding-left: 30px;
+            color: white;
+            margin: 0;
+            height: 50px;
+            border-radius: unset;
+            border: 1px solid rgb(0, 91, 164);
+        }
+
+        .collapse .navbar-form .form-group input:hover {
+            background-color: rgb(82, 82, 87);
+
+        }
+
+        .collapse .navbar-form .form-group {
+            position: relative;
+            width: 208px;
+
+        }
+
+        .collapse .navbar-form .form-group img {
+            /* background-color: red; */
+            width: 15px;
+            position: absolute;
+            left: 10px;
+            top: 15px;
+        }
+
+        .collapse .navbar-form img {
+            /* background-color: red; */
+            width: 17px;
+            position: absolute;
+            right: 97px;
+            top: 15px;
+        }
+
+        .collapse .nav li a:hover {
+            /* background-color:red ; */
+            color: white;
+
+
+        }
+
+        .nav-c {
+            position: relative;
+
+        }
+
+        .nav-c .navl-c {
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 55px;
+            width: 50px;
+            height: 50px;
+
+        }
+
+        .nav-c .navr-c {
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(0, 91, 164);
+
+        }
+
+        .nav-c img {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 15px;
+            height: 15px;
+        }
+
+        .zhushe {
+            background-color: rgb(37, 37, 42);
+            text-align: center;
+            font-size: 16px;
+            color: rgb(194, 191, 194);
+            padding: 10px;
+            margin-top: 50px;
+        }
+    </style>
+    <!-- 灯泡 轮播css -->
+    <style>
+        .media {
+            /* border: 1px solid red; */
+            line-height: 30px;
+            height: 370px;
+            padding-top: 130px;
+        }
+
+        .value dl {
+            /* background: lightblue; */
+            text-align: center;
+        }
+
+        .value dl dt {
+            width: 50px;
+            height: 50px;
+            background: url("https://code.visualstudio.com/assets/icons/valueprops-top-sprite.svg");
+            display: inline-block;
+        }
+
+        .value dl:hover {
+            background: lightgray;
+        }
+
+        .value dl:hover dt {
+            background-position-y: -53px;
+        }
+
+        .value dl:nth-child(2) dt {
+            background-position-x: -50px;
+        }
+
+        .value dl:nth-child(3) dt {
+            background-position-x: -100px;
+        }
+
+        .value dl:nth-child(4) dt {
+            background-position-x: -156px;
+        }
+
+        .value dl dd {}
+
+        .v-banner {
+            background: lightgray;
+        }
+
+        .v-banner .media img {
+            width: 64px;
+            height: 64px;
+        }
+
+        .v-banner #xxx .carousel-control {
+            background: none;
+            width: auto;
+        }
+
+        .biaoShi dl {
+            margin: 0;
+            padding: 20px 0;
+        }
+    </style>
+
+    <!-- 导航栏下面身体css -->
+    <style>
+        .box-c {
+            margin: 0 auto;
+            background-color: rgb(44, 44, 50);
+
+        }
+
+        .boxleft .page-header {
+            color: white;
+            text-align: center;
+            height: 350px;
+            border: none;
+        }
+
+        .boxleft .page-header .page-h4 {
+            color: rgb(171, 171, 173);
+            text-align: center;
+
+        }
+
+        .boxright img {
+            width: 100%;
+        }
+
+        /* @media (max-width: 1560px) {
+            .box-c {
+                margin: 0 auto;
+            }
+        } */
+
+        #y_button1 {
+            border-radius: 0;
+            padding: 0 20px;
+            border: none;
+            background-color: #0066b8;
+        }
+
+        #y_button2 {
+            padding: 20px 15px 19px 15px;
+            margin-left: 2px;
+            border: none;
+            border-radius: 0;
+            background-color: #0066b8;
+        }
+
+        .dropdown-menu {
+            width: 300px;
+            border-radius: 0;
+            padding-left: 5px;
+
+        }
+
+        .dropdown-menu li span:first-child {
+            color: #000;
+            font-size: 18px;
+        }
+
+        .dropdown-menu li span {
+            color: rgb(19, 17, 17);
+            width: 70px;
+            display: inline-block;
+            /* padding:0px; */
+            text-align: center;
+
+
+        }
+
+        .dropdown-menu li span img {
+            width: 10px;
+            margin: 0 auto;
+        }
+
+        .subtext-c {
+            width: 300px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #25252B;
+            border-radius: 10px;
+            margin: 0 auto;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .subtext-c::after {
+            content: '';
+            display: block;
+            width: 1.4rem;
+            height: 1.4rem;
+            background-color: #25252B;
+            position: absolute;
+            top: -7px;
+            right: 30px;
+            transform: rotate(45deg)
+        }
+
+        .wrap-together {
+            color: rgba(255, 255, 255, 0.6);
+        }
+    </style>
+    <!-- 新闻部分 -->
+    <style>
+        .MeetRight h3 {
+            font-size: 25px;
+            font-weight: lighter;
+        }
+
+        .MeetRight p {
+            font-size: 18px;
+
+            line-height: 40px;
+        }
+
+        .new-c .MeetLeft img {
+            width: 300px;
+            padding-top: 20px;
+        }
+
+        .PrintRight h3 {
+            font-size: 25px;
+            font-weight: lighter;
+        }
+
+        .PrintRight p {
+            font-size: 18px;
+
+            line-height: 40px;
+        }
+
+        .new-c .PrintLeft img {
+            width: 300px;
+            padding-top: 20px;
+        }
+
+        .news-p {
+            background-color: rgb(245, 245, 245);
+        }
+
+        .gitRight h3 {
+            font-size: 25px;
+            font-weight: lighter;
+        }
+
+        .new-c .gitLeft img {
+            width: 300px;
+            padding-top: 20px;
+        }
+
+        .gitRight p {
+            font-size: 18px;
+
+            line-height: 40px;
+        }
+
+        .new-c .ExtensibleLeft img {
+            width: 300px;
+            /* padding-top: 20px; */
+        }
+
+        /* js添加 */
+        .Extensible_a {
+            transform: scale(1.1, 1.1);
+            /* padding-top: 20px; */
+            transition: all 0.25s;
+        }
+
+        .Extensible_b {
+            transform: scale(1, 1);
+            /* padding-top: 20px; */
+            transition: all 0.25s;
+        }
+
+        .ExtensibleRight h3 {
+            font-size: 25px;
+            font-weight: lighter;
+        }
+
+        .ExtensibleLeft p {
+            font-size: 18px;
+
+            line-height: 40px;
+        }
+
+        .news-e {
+            background-color: rgb(245, 245, 245);
+        }
+
+
+
+        .DeployRight h3 {
+            font-size: 25px;
+            font-weight: lighter;
+        }
+
+        .DeployRight p {
+            font-size: 18px;
+
+            line-height: 40px;
+        }
+
+        .new-c .DeployLeft img {
+            width: 300px;
+            padding-top: 20px;
+        }
+
+
+        @media (max-width: 768px) {
+
+            /* .new-diandao{
+                display: flex;
+                flex-direction: row-reverse;
+            } */
+            .new-c .MeetLeft img {
+                display: block;
+                width: 300px;
+                margin: 0 auto;
+            }
+
+            .new-c .PrintLeft img {
+                display: block;
+                width: 300px;
+                margin: 0 auto;
+                /* clear:both; */
+            }
+
+            .gitLeft img {
+                display: block;
+                width: 300px;
+                margin: 0 auto;
+                /* border: 1px solid red; */
+            }
+
+            .new-c .ExtensibleLeft img {
+                display: block;
+                width: 300px;
+                margin: 0 auto;
+            }
+
+            .new-c .DeployLeft img {
+                display: block;
+                width: 300px;
+                margin: 0 auto;
+            }
+
+        }
+    </style>
+    <!-- 文字轮播css -->
+    <style>
+        .wenzhi_box {
+            background-color: rgb(245, 245, 245);
+
+        }
+
+        .wenzhic {
+            margin: 0 auto;
+
+        }
+
+        .wenzhiLeft {
+            width: 50%;
+            height: 50%;
+            /* background-color: pink; */
+            margin-top: 110px;
+            font-size: 30px;
+            text-align: right;
+
+        }
+
+        /* ------------------ */
+        .news-scroll {
+            background: none;
+        }
+
+        .news-scroll .scroll-box {
+            width: 300px;
+            border-radius: 0;
+            box-shadow: none;
+            background-color: rgb(245, 245, 245);
+
+        }
+
+        .roll ul li {
+            text-align: center;
+        }
+
+        .roll ul li a {
+            padding: 0;
+            color: rgba(0, 0, 0, 0.781);
+            font-size: 30px;
+        }
+
+        .tijiao {
+            width: 200px;
+            height: 50px;
+            margin: 50px auto;
+            background-color: rgb(0, 91, 164);
+            color: rgb(250, 246, 246);
+            text-align: center;
+            font-size: 25px;
+            padding-top: 10px;
+        }
+    </style>
+    <!-- 下载版本 -->
+
+</head>
+
+<body>
+    <!-- 导航 -->
+    <!-- 头部 -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <!-- 导航 -->
+        <div class="container-fluid container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+
+                <a class="navbar-brand" href="#">
+                    <img src="../img/01img/vscode图标.png" alt="">
+                    <span> Visual Studio Code</span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Updates</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">API</a></li>
+                    <li><a href="#">Extensions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+                <form class="navbar-form navbar-left hidden-xs hidden-sm">
+                    <div class="form-group  ">
+
+                        <input type="text" class="form-control " placeholder="Search Docs">
+                        <!-- <span class="form-tu"></span> -->
+                        <img src="https://code.visualstudio.com/assets/icons/search.svg" alt="">
+
+                    </div>
+                    <img src="https://code.visualstudio.com/assets/icons/download.svg" alt="">
+
+                    <button type="submit" class="btn btn-default  ">Download</button>
+                </form>
+                <div class="nav-c hidden-xs hidden-md hidden-lg">
+                    <div class="navl-c">
+                        <img src="https://code.visualstudio.com/assets/icons/search.svg" alt="">
+                    </div>
+                    <div class="navr-c">
+                        <img src="https://code.visualstudio.com/assets/icons/download.svg" alt="">
+                    </div>
+                </div>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+
+
+    </nav>
+    <!-- 导航下面的注释 -->
+    <div class="zhushe hidden-xs">
+        <div class="zhu container"><a href="">Version 1.46 </a><span> now available! Read about the new features and
+                fixes from May.</span></div>
+    </div>
+    <!-- 导航下面的身体 -->
+    <div class="box-c">
+        <div class="box-c container row">
+            <div class="boxleft col-md-6">
+                <div class="page-header">
+                    <h1>Code editing. </h1>
+                    <h1>Redefined. </h1>
+                    <h4 class="page-h4">Free. Built on open source. Runs everywhere. </h4>
+
+                    <!-- 下载 button -->
+                    <div class="btn-group">
+                        <button type="button" id="y_button1" class="btn btn-danger">
+                            <h4>Download for Windows</h4>
+                            <span>Stable Build</span>
+                        </button>
+                        <button type="button" id="y_button2" class="btn btn-danger dropdown-toggle "
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <span> </span>
+                                <span> </span>
+                                <span>
+                                    Stsble
+                                </span>
+                                <span>
+                                    Insiders
+                                </span>
+                            </li>
+                            <li>
+                                <span>macOS</span>
+                                <span>Package</span>
+                                <span>
+                                    <img src="https://code.visualstudio.com/assets/icons/download_blue.svg" alt="">
+                                </span>
+                                <span>
+                                    <img src="https://code.visualstudio.com/assets/icons/download_dark.svg" alt="">
+                                </span>
+                            </li>
+                            <li>
+                                <span>Windows x64</span>
+                                <span>User Installer</span>
+                                <span>
+                                    <img src="https://code.visualstudio.com/assets/icons/download_blue.svg" alt="">
+                                </span>
+                                <span>
+                                    <img src="https://code.visualstudio.com/assets/icons/download_dark.svg" alt="">
+                                </span>
+                            </li>
+                            <li>
+                                <span>Liunx x64</span>
+                                <span>.deb<br>.rpm</span>
+                                <span>
+                                    <img src="https://code.visualstudio.com/assets/icons/download_blue.svg" alt="">
+                                </span>
+                                <span>
+                                    <img src="https://code.visualstudio.com/assets/icons/download_dark.svg" alt="">
+                                </span>
+                            </li>
+
+                            <li role="separator" class="divider">Other Downloads</li>
+
+                        </ul>
+                    </div>
+                    <!-- 提示框 -->
+                    <div class="subtext-c">
+                        <a href="">Other platforms</a>
+                        and
+                        <a href="">Insiders Edition</a>
+
+                    </div>
+                    <!--  -->
+                    <p class="wrap-together">
+                        By using VS Code, you agree to its<br>
+                        <a href=""> license and privacy statement.</a>
+                    </p>
+                </div>
+            </div>
+            <div class="boxright col-md-6">
+                <img src="https://code.visualstudio.com/assets/home/home-screenshot-linux-lg.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- 灯泡 -->
+    <div class="container value">
+        <div class="row biaoShi">
+            <dl class="col-xs-6 col-sm-3">
+                <dt></dt>
+                <dd>hello world</dd>
+            </dl>
+            <dl class="col-xs-6 col-sm-3">
+                <dt></dt>
+                <dd>hello world</dd>
+            </dl>
+            <dl class="col-xs-6 col-sm-3">
+                <dt></dt>
+                <dd>hello world</dd>
+            </dl>
+            <dl class="col-xs-6 col-sm-3">
+                <dt></dt>
+                <dd>hello world</dd>
+            </dl>
+        </div>
+    </div>
+
+    <!-- 轮播 -->
+
+    <div class="v-banner">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div id="xxx" class="carousel slide" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object img-circle"
+                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/Una.jpg"
+                                                    alt="..." />
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                Una Kravets<small>@text</small>
+                                            </h5>
+                                            <p>
+                                                VS @code does so many things right. I’m constantly
+                                                impressed by the UX, and customizing workspace / user
+                                                preferences is no exception. 🙌🏼💯 It just keeps
+                                                getting better ❤️
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object img-circle"
+                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/Una.jpg"
+                                                    alt="..." />
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                Una Kravets<small>@text</small>
+                                                <small class="glyphicon glyphicon-remove-sign pull-right"></small>
+                                            </h5>
+                                            <p>
+                                                VS @code does so many things right. I’m constantly
+                                                impressed by the UX, and customizing workspace / user
+                                                preferences is no exception. 🙌🏼💯 It just keeps
+                                                getting better ❤️
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object img-circle"
+                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/Una.jpg"
+                                                    alt="..." />
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                Una Kravets<small>@text</small>
+                                            </h5>
+                                            <p>
+                                                VS @code does so many things right. I’m constantly
+                                                impressed by the UX, and customizing workspace / user
+                                                preferences is no exception. 🙌🏼💯 It just keeps
+                                                getting better ❤️
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object img-circle"
+                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/Una.jpg"
+                                                    alt="..." />
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                Una Kravets<small>@text</small>
+                                            </h5>
+                                            <p>
+                                                VS @code does so many things right. I’m constantly
+                                                impressed by the UX, and customizing workspace / user
+                                                preferences is no exception. 🙌🏼💯 It just keeps
+                                                getting better ❤️
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object img-circle"
+                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/Una.jpg"
+                                                    alt="..." />
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                Una Kravets<small>@text</small>
+                                                <small class="glyphicon glyphicon-remove-sign pull-right"></small>
+                                            </h5>
+                                            <p>
+                                                VS @code does so many things right. I’m constantly
+                                                impressed by the UX, and customizing workspace / user
+                                                preferences is no exception. 🙌🏼💯 It just keeps
+                                                getting better ❤️
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object img-circle"
+                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/Una.jpg"
+                                                    alt="..." />
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                Una Kravets<small>@text</small>
+                                            </h5>
+                                            <p>
+                                                VS @code does so many things right. I’m constantly
+                                                impressed by the UX, and customizing workspace / user
+                                                preferences is no exception. 🙌🏼💯 It just keeps
+                                                getting better ❤️
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object img-circle"
+                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/Una.jpg"
+                                                    alt="..." />
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                Una Kravets<small>@text</small>
+                                            </h5>
+                                            <p>
+                                                VS @code does so many things right. I’m constantly
+                                                impressed by the UX, and customizing workspace / user
+                                                preferences is no exception. 🙌🏼💯 It just keeps
+                                                getting better ❤️
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object img-circle"
+                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/Una.jpg"
+                                                    alt="..." />
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                Una Kravets<small>@text</small>
+                                                <small class="glyphicon glyphicon-remove-sign pull-right"></small>
+                                            </h5>
+                                            <p>
+                                                VS @code does so many things right. I’m constantly
+                                                impressed by the UX, and customizing workspace / user
+                                                preferences is no exception. 🙌🏼💯 It just keeps
+                                                getting better ❤️
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-md-4">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <a href="#">
+                                                <img class="media-object img-circle"
+                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/Una.jpg"
+                                                    alt="..." />
+                                            </a>
+                                        </div>
+                                        <div class="media-body">
+                                            <h5 class="media-heading">
+                                                Una Kravets<small>@text</small>
+                                            </h5>
+                                            <p>
+                                                VS @code does so many things right. I’m constantly
+                                                impressed by the UX, and customizing workspace / user
+                                                preferences is no exception. 🙌🏼💯 It just keeps
+                                                getting better ❤️
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#xxx" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#xxx" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新闻部分 -->
+    <div class="newbox">
+        <div class="news-m">
+
+            <div class="Meet container">
+                <div class="new-c row">
+                    <div class="MeetLeft col-sm-6 col-lg-6">
+                        <img src="https://code.visualstudio.com/assets/images/home-intellisense.svg" alt="">
+                    </div>
+                    <div class="MeetRight col-sm-6 col-lg-6">
+                        <h3>Meet IntelliSense.</h3>
+                        <p>Go beyond syntax highlighting and autocomplete with IntelliSense, which provides smart
+                            completions based on variable types, function definitions, and imported modules.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-p">
+
+            <div class="Print container">
+                <div class="new-c row  hidden-xs">
+                    <div class="PrintRight col-xs-12 col-sm-6 col-lg-6">
+                        <h3>Print statement debugging is a thing of the past.</h3>
+                        <p>Debug code right from the editor. Launch or attach to your running apps and debug with break
+                            points, call stacks, and an interactive console.</p>
+                    </div>
+
+                    <div class="PrintLeft col-xs-12 col-sm-6 col-lg-6 ">
+                        <img src="https://code.visualstudio.com/assets/images/home-debug.svg" alt="" class="pull-right">
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 小屏幕显示 -->
+            <div class="Print container">
+                <div class="new-c row visible-xs">
+
+
+                    <div class="PrintLeft col-xs-12 col-sm-6 col-lg-6 ">
+                        <img src="https://code.visualstudio.com/assets/images/home-debug.svg" alt="">
+                    </div>
+                    <div class="PrintRight col-xs-12 col-sm-6 col-lg-6">
+                        <h3>Print statement debugging is a thing of the past.</h3>
+                        <p>Debug code right from the editor. Launch or attach to your running apps and debug with break
+                            points, call stacks, and an interactive console.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="news-g">
+
+            <div class="git container">
+                <div class="new-c row">
+                    <div class="gitLeft col-sm-6 col-lg-6">
+                        <img src="https://code.visualstudio.com/assets/images/home-git.svg" alt="">
+                    </div>
+                    <div class="gitRight col-sm-6 col-lg-6">
+                        <h3> Git commands built-in.</h3>
+                        <p>Working with Git and other SCM providers has never been easier. Review diffs, stage files,
+                            and
+                            make commits right from the editor. Push and pull from any hosted SCM service.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="news-e">
+
+            <div class="Extensible container">
+                <div class="new-c row hidden-xs">
+                    <div class="ExtensibleRight col-sm-6 col-lg-6">
+                        <h3>Extensible and customizable.</h3>
+                        <p>Want even more features? Install extensions to add new languages, themes, debuggers, and to
+                            connect to additional services. Extensions run in separate processes, ensuring they won't
+                            slow
+                            down your editor. <a>Learn more about extensions.</a></p>
+                    </div>
+                    <div class="ExtensibleLeft col-sm-6 col-lg-6 ">
+                        <img src="https://code.visualstudio.com/assets/images/Hundreds-of-Extensions.png"
+                            alt="hundreds-extensions-img" class="pull-right">
+                    </div>
+
+                </div>
+            </div>
+            <!-- 小屏幕显示 -->
+            <div class="Extensible container">
+                <div class="new-c row visible-xs">
+                    <div class="ExtensibleLeft col-sm-6 col-lg-6 ">
+                        <img src="https://code.visualstudio.com/assets/images/Hundreds-of-Extensions.png"
+                            alt="hundreds-extensions-img">
+                    </div>
+                    <div class="ExtensibleRight col-sm-6 col-lg-6">
+                        <h3>Extensible and customizable.</h3>
+                        <p>Want even more features? Install extensions to add new languages, themes, debuggers, and to
+                            connect to additional services. Extensions run in separate processes, ensuring they won't
+                            slow
+                            down your editor. <a>Learn more about extensions.</a></p>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="news-d">
+
+            <div class="Deploy container">
+                <div class="new-c row">
+                    <div class="DeployLeft col-sm-6 col-lg-6">
+                        <img src="https://code.visualstudio.com/assets/images/home-azure.svg" alt="">
+                    </div>
+                    <div class="DeployRight col-sm-6 col-lg-6">
+                        <h3>Deploy with confidence and ease </h3>
+                        <p>With <a>Microsoft Azure</a> you can deploy and host your React, Angular, Vue, Node, Python
+                            (and
+                            more!)
+                            sites, store and query relational and document based data, and scale with serverless
+                            computing,
+                            all with ease, <a>all from within VS Code.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 文字轮播 -->
+    <div class="wenzhi_box">
+        <div class="container wenzhic">
+            <div class="row ">
+
+                <div class="wenzhiLeft col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    VS Code for
+                </div>
+                <div class="wenzhiRight  col-xs-12 col-sm-6 col-md-6 col-lg-6">
+
+
+                    <div class="wenzhi_box"></div>
+                    <div class="news-scroll">
+                        <div class="scroll-box">
+
+                            <div class="roll">
+                                <ul>
+                                    <li class="roll_1">
+                                        <a href="#" class="ellipsis">Batch</a>
+                                    </li>
+                                    <li class="roll_2">
+                                        <a href="#" class="ellipsis">Sass</a>
+                                    </li>
+                                    <li class="roll_3">
+                                        <a href="#" class="ellipsis">Jade</a>
+                                    </li>
+                                    <li class="roll_4">
+                                        <a href="#" class="ellipsis">JavaScript</a>
+                                    </li>
+                                    <li class="roll_5">
+                                        <a href="#" class="ellipsis">PHP</a>
+                                    </li>
+                                    <li class="roll_hide">
+                                        <a href="#" class="ellipsis">HandleBars</a>
+                                    </li>
+                                    <li class="roll_hide">
+                                        <a href="#" class="ellipsis">Makefile</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tijiao">Get Started Now</div>
+        </div>
+    </div>
+    <!-- 下载版本 -->
+    <!-- <div class="banben">
+        <div class="banben1">
+            <img src="https://code.visualstudio.com/assets/images/windows-logo.png" alt="">
+            <div class="btn-group">
+                <button type="button" id="y_button1" class="btn btn-danger">
+                    <h4>Download for Windows</h4>
+                    <span>Stable Build</span>
+                </button>
+                <button type="button" id="y_button2" class="btn btn-danger dropdown-toggle " data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="./js/roll.js"></script>
+
+
+    <script>
+        $(".carousel").carousel();
+        $(".ExtensibleLeft img").on("mouseover", function () {
+            $(this).removeClass("Extensible_b")
+            $(this).addClass("Extensible_a")
+        })
+        $(".ExtensibleLeft img").on("mouseout", function () {
+            $(this).removeClass("Extensible_a")
+            $(this).addClass("Extensible_b")
+        })
+    </script>
+</body>
+
+</html>
