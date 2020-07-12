@@ -1,0 +1,55 @@
+/* 文字轮播css */
+        .wenzhi_box {
+            background-color: rgb(245, 245, 245);
+
+        }
+
+        .wenzhic {
+            margin: 0 auto;
+
+        }
+
+        .wenzhiLeft {
+            width: 50%;
+            height: 50%;
+            /* background-color: pink; */
+            margin-top: 110px;
+            font-size: 30px;
+            text-align: right;
+
+        }
+
+        /* ------------------ */
+        .news-scroll {
+            background: none;
+        }
+
+        .news-scroll .scroll-box {
+            width: 300px;
+            border-radius: 0;
+            box-shadow: none;
+            background-color: rgb(245, 245, 245);
+
+        }
+
+        .roll ul li {
+            text-align: center;
+        }
+
+        .roll ul li a {
+            padding: 0;
+            color: rgba(0, 0, 0, 0.781);
+            font-size: 30px;
+        }
+
+        .tijiao {
+            width: 200px;
+            height: 50px;
+            margin: 50px auto;
+            background-color: rgb(0, 91, 164);
+            color: rgb(250, 246, 246);
+            text-align: center;
+            font-size: 25px;
+            padding-top: 10px;
+        }
+ 

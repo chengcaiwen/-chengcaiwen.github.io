@@ -1,0 +1,146 @@
+/* <!-- 新闻部分 */
+
+        .MeetRight h3 {
+            font-size: 25px;
+            font-weight: lighter;
+        }
+
+        .MeetRight p {
+            font-size: 18px;
+
+            line-height: 40px;
+        }
+
+        .new-c .MeetLeft img {
+            width: 300px;
+            padding-top: 20px;
+        }
+
+        .PrintRight h3 {
+            font-size: 25px;
+            font-weight: lighter;
+        }
+
+        .PrintRight p {
+            font-size: 18px;
+
+            line-height: 40px;
+        }
+
+        .new-c .PrintLeft img {
+            width: 300px;
+            padding-top: 20px;
+        }
+
+        .news-p {
+            background-color: rgb(245, 245, 245);
+        }
+
+        .gitRight h3 {
+            font-size: 25px;
+            font-weight: lighter;
+        }
+
+        .new-c .gitLeft img {
+            width: 300px;
+            padding-top: 20px;
+        }
+
+        .gitRight p {
+            font-size: 18px;
+
+            line-height: 40px;
+        }
+
+        .new-c .ExtensibleLeft img {
+            width: 300px;
+            /* padding-top: 20px; */
+        }
+
+        /* js添加 */
+        .Extensible_a {
+            transform: scale(1.1, 1.1);
+            /* padding-top: 20px; */
+            transition: all 0.25s;
+        }
+
+        .Extensible_b {
+            transform: scale(1, 1);
+            /* padding-top: 20px; */
+            transition: all 0.25s;
+        }
+
+        .ExtensibleRight h3 {
+            font-size: 25px;
+            font-weight: lighter;
+        }
+
+        .ExtensibleLeft p {
+            font-size: 18px;
+
+            line-height: 40px;
+        }
+
+        .news-e {
+            background-color: rgb(245, 245, 245);
+        }
+
+
+
+        .DeployRight h3 {
+            font-size: 25px;
+            font-weight: lighter;
+        }
+
+        .DeployRight p {
+            font-size: 18px;
+
+            line-height: 40px;
+        }
+
+        .new-c .DeployLeft img {
+            width: 300px;
+            padding-top: 20px;
+        }
+
+
+        @media (max-width: 768px) {
+
+            /* .new-diandao{
+                display: flex;
+                flex-direction: row-reverse;
+            } */
+            .new-c .MeetLeft img {
+                display: block;
+                width: 300px;
+                margin: 0 auto;
+            }
+
+            .new-c .PrintLeft img {
+                display: block;
+                width: 300px;
+                margin: 0 auto;
+                /* clear:both; */
+            }
+
+            .gitLeft img {
+                display: block;
+                width: 300px;
+                margin: 0 auto;
+                /* border: 1px solid red; */
+            }
+
+            .new-c .ExtensibleLeft img {
+                display: block;
+                width: 300px;
+                margin: 0 auto;
+            }
+
+            .new-c .DeployLeft img {
+                display: block;
+                width: 300px;
+                margin: 0 auto;
+            }
+
+        }
+ 

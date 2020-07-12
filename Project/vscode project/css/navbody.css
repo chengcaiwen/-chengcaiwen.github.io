@@ -1,0 +1,100 @@
+/* 导航栏下面身体css */
+
+        .box-c {
+            margin: 0 auto;
+            background-color: rgb(44, 44, 50);
+
+        }
+
+        .boxleft .page-header {
+            color: white;
+            text-align: center;
+            height: 350px;
+            border: none;
+        }
+
+        .boxleft .page-header .page-h4 {
+            color: rgb(171, 171, 173);
+            text-align: center;
+
+        }
+
+        .boxright img {
+            width: 100%;
+        }
+
+        /* @media (max-width: 1560px) {
+            .box-c {
+                margin: 0 auto;
+            }
+        } */
+
+        #y_button1 {
+            border-radius: 0;
+            padding: 0 20px;
+            border: none;
+            background-color: #0066b8;
+        }
+
+        #y_button2 {
+            padding: 20px 15px 19px 15px;
+            margin-left: 2px;
+            border: none;
+            border-radius: 0;
+            background-color: #0066b8;
+        }
+
+        .dropdown-menu {
+            width: 300px;
+            border-radius: 0;
+            padding-left: 5px;
+
+        }
+
+        .dropdown-menu li span:first-child {
+            color: #000;
+            font-size: 18px;
+        }
+
+        .dropdown-menu li span {
+            color: rgb(19, 17, 17);
+            width: 70px;
+            display: inline-block;
+            /* padding:0px; */
+            text-align: center;
+
+
+        }
+
+        .dropdown-menu li span img {
+            width: 10px;
+            margin: 0 auto;
+        }
+
+        .subtext-c {
+            width: 300px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #25252B;
+            border-radius: 10px;
+            margin: 0 auto;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .subtext-c::after {
+            content: '';
+            display: block;
+            width: 1.4rem;
+            height: 1.4rem;
+            background-color: #25252B;
+            position: absolute;
+            top: -7px;
+            right: 30px;
+            transform: rotate(45deg)
+        }
+
+        .wrap-together {
+            color: rgba(255, 255, 255, 0.6);
+        }
+ 

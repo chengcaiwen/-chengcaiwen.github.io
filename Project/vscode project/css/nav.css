@@ -1,0 +1,141 @@
+/* 导航css */
+
+        .navbar {
+            background-color: rgb(44, 44, 50);
+            /* position: relative; */
+
+            margin: 0;
+            border: 0;
+        }
+
+        /* .navbar .container-fluid{
+            position: fixed;
+
+        } */
+
+        .navbar-header .navbar-brand {
+            font-size: 20px;
+            color: white;
+
+        }
+
+        .navbar-header .navbar-brand img {
+            float: left;
+            width: 18px;
+            margin-right: 5px;
+        }
+
+        .navbar-header .navbar-brand:hover {
+            color: white;
+
+
+        }
+
+        .collapse {
+            position: relative;
+        }
+
+        .collapse .navbar-form {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 0;
+        }
+
+        .collapse .navbar-form .form-group input {
+            background-color: rgb(82, 82, 87);
+            padding-left: 30px;
+            margin: 0;
+            border: none;
+            height: 50px;
+            border-radius: unset;
+
+        }
+
+        .collapse .navbar-form button {
+            background-color: rgb(0, 91, 164);
+            padding-left: 30px;
+            color: white;
+            margin: 0;
+            height: 50px;
+            border-radius: unset;
+            border: 1px solid rgb(0, 91, 164);
+        }
+
+        .collapse .navbar-form .form-group input:hover {
+            background-color: rgb(82, 82, 87);
+
+        }
+
+        .collapse .navbar-form .form-group {
+            position: relative;
+            width: 208px;
+
+        }
+
+        .collapse .navbar-form .form-group img {
+            /* background-color: red; */
+            width: 15px;
+            position: absolute;
+            left: 10px;
+            top: 15px;
+        }
+
+        .collapse .navbar-form img {
+            /* background-color: red; */
+            width: 17px;
+            position: absolute;
+            right: 97px;
+            top: 15px;
+        }
+
+        .collapse .nav li a:hover {
+            /* background-color:red ; */
+            color: white;
+
+
+        }
+
+        .nav-c {
+            position: relative;
+
+        }
+
+        .nav-c .navl-c {
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 55px;
+            width: 50px;
+            height: 50px;
+
+        }
+
+        .nav-c .navr-c {
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            width: 50px;
+            height: 50px;
+            background-color: rgb(0, 91, 164);
+
+        }
+
+        .nav-c img {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 15px;
+            height: 15px;
+        }
+
+        .zhushe {
+            background-color: rgb(37, 37, 42);
+            text-align: center;
+            font-size: 16px;
+            color: rgb(194, 191, 194);
+            padding: 10px;
+            margin-top: 50px;
+        }
+  

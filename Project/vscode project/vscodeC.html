@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>vscode project</title>
+    <title>vscode</title>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -20,512 +20,23 @@
 
 
     <!-- 导航css -->
-    <style>
-        .navbar {
-            background-color: rgb(44, 44, 50);
-            /* position: relative; */
-
-            margin: 0;
-            border: 0;
-        }
-
-        /* .navbar .container-fluid{
-            position: fixed;
-
-        } */
-
-        .navbar-header .navbar-brand {
-            font-size: 20px;
-            color: white;
-
-        }
-
-        .navbar-header .navbar-brand img {
-            float: left;
-            width: 18px;
-            margin-right: 5px;
-        }
-
-        .navbar-header .navbar-brand:hover {
-            color: white;
-
-
-        }
-
-        .collapse {
-            position: relative;
-        }
-
-        .collapse .navbar-form {
-            position: absolute;
-            right: 0;
-            top: 0;
-            margin: 0;
-        }
-
-        .collapse .navbar-form .form-group input {
-            background-color: rgb(82, 82, 87);
-            padding-left: 30px;
-            margin: 0;
-            border: none;
-            height: 50px;
-            border-radius: unset;
-
-        }
-
-        .collapse .navbar-form button {
-            background-color: rgb(0, 91, 164);
-            padding-left: 30px;
-            color: white;
-            margin: 0;
-            height: 50px;
-            border-radius: unset;
-            border: 1px solid rgb(0, 91, 164);
-        }
-
-        .collapse .navbar-form .form-group input:hover {
-            background-color: rgb(82, 82, 87);
-
-        }
-
-        .collapse .navbar-form .form-group {
-            position: relative;
-            width: 208px;
-
-        }
-
-        .collapse .navbar-form .form-group img {
-            /* background-color: red; */
-            width: 15px;
-            position: absolute;
-            left: 10px;
-            top: 15px;
-        }
-
-        .collapse .navbar-form img {
-            /* background-color: red; */
-            width: 17px;
-            position: absolute;
-            right: 97px;
-            top: 15px;
-        }
-
-        .collapse .nav li a:hover {
-            /* background-color:red ; */
-            color: white;
-
-
-        }
-
-        .nav-c {
-            position: relative;
-
-        }
-
-        .nav-c .navl-c {
-            display: block;
-            position: absolute;
-            top: 0px;
-            right: 55px;
-            width: 50px;
-            height: 50px;
-
-        }
-
-        .nav-c .navr-c {
-            display: block;
-            position: absolute;
-            top: 0px;
-            right: 10px;
-            width: 50px;
-            height: 50px;
-            background-color: rgb(0, 91, 164);
-
-        }
-
-        .nav-c img {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            width: 15px;
-            height: 15px;
-        }
-
-        .zhushe {
-            background-color: rgb(37, 37, 42);
-            text-align: center;
-            font-size: 16px;
-            color: rgb(194, 191, 194);
-            padding: 10px;
-            margin-top: 50px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/nav.css">
+    
     <!-- 灯泡 轮播css -->
-    <style>
-        .media {
-            /* border: 1px solid red; */
-            line-height: 30px;
-            height: 370px;
-            padding-top: 130px;
-        }
-
-        .value dl {
-            /* background: lightblue; */
-            text-align: center;
-        }
-
-        .value dl dt {
-            width: 50px;
-            height: 50px;
-            background: url("https://code.visualstudio.com/assets/icons/valueprops-top-sprite.svg");
-            display: inline-block;
-        }
-
-        .value dl:hover {
-            background: lightgray;
-        }
-
-        .value dl:hover dt {
-            background-position-y: -53px;
-        }
-
-        .value dl:nth-child(2) dt {
-            background-position-x: -50px;
-        }
-
-        .value dl:nth-child(3) dt {
-            background-position-x: -100px;
-        }
-
-        .value dl:nth-child(4) dt {
-            background-position-x: -156px;
-        }
-
-        
-
-        .v-banner {
-            background: lightgray;
-        }
-
-        .v-banner .media img {
-            width: 64px;
-            height: 64px;
-        }
-
-        .v-banner #xxx .carousel-control {
-            background: none;
-            width: auto;
-        }
-
-        .biaoShi dl {
-            margin: 0;
-            padding: 20px 0;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/lunbodengpao.css">
+   
 
     <!-- 导航栏下面身体css -->
-    <style>
-        .box-c {
-            margin: 0 auto;
-            background-color: rgb(44, 44, 50);
-
-        }
-
-        .boxleft .page-header {
-            color: white;
-            text-align: center;
-            height: 350px;
-            border: none;
-        }
-
-        .boxleft .page-header .page-h4 {
-            color: rgb(171, 171, 173);
-            text-align: center;
-
-        }
-
-        .boxright img {
-            width: 100%;
-        }
-
-        /* @media (max-width: 1560px) {
-            .box-c {
-                margin: 0 auto;
-            }
-        } */
-
-        #y_button1 {
-            border-radius: 0;
-            padding: 0 20px;
-            border: none;
-            background-color: #0066b8;
-        }
-
-        #y_button2 {
-            padding: 20px 15px 19px 15px;
-            margin-left: 2px;
-            border: none;
-            border-radius: 0;
-            background-color: #0066b8;
-        }
-
-        .dropdown-menu {
-            width: 300px;
-            border-radius: 0;
-            padding-left: 5px;
-
-        }
-
-        .dropdown-menu li span:first-child {
-            color: #000;
-            font-size: 18px;
-        }
-
-        .dropdown-menu li span {
-            color: rgb(19, 17, 17);
-            width: 70px;
-            display: inline-block;
-            /* padding:0px; */
-            text-align: center;
-
-
-        }
-
-        .dropdown-menu li span img {
-            width: 10px;
-            margin: 0 auto;
-        }
-
-        .subtext-c {
-            width: 300px;
-            height: 30px;
-            line-height: 30px;
-            background-color: #25252B;
-            border-radius: 10px;
-            margin: 0 auto;
-            margin-top: 20px;
-            position: relative;
-        }
-
-        .subtext-c::after {
-            content: '';
-            display: block;
-            width: 1.4rem;
-            height: 1.4rem;
-            background-color: #25252B;
-            position: absolute;
-            top: -7px;
-            right: 30px;
-            transform: rotate(45deg)
-        }
-
-        .wrap-together {
-            color: rgba(255, 255, 255, 0.6);
-        }
-    </style>
+    <link rel="stylesheet" href="./css/navbody.css">
+    
     <!-- 新闻部分 -->
-    <style>
-        .MeetRight h3 {
-            font-size: 25px;
-            font-weight: lighter;
-        }
-
-        .MeetRight p {
-            font-size: 18px;
-
-            line-height: 40px;
-        }
-
-        .new-c .MeetLeft img {
-            width: 300px;
-            padding-top: 20px;
-        }
-
-        .PrintRight h3 {
-            font-size: 25px;
-            font-weight: lighter;
-        }
-
-        .PrintRight p {
-            font-size: 18px;
-
-            line-height: 40px;
-        }
-
-        .new-c .PrintLeft img {
-            width: 300px;
-            padding-top: 20px;
-        }
-
-        .news-p {
-            background-color: rgb(245, 245, 245);
-        }
-
-        .gitRight h3 {
-            font-size: 25px;
-            font-weight: lighter;
-        }
-
-        .new-c .gitLeft img {
-            width: 300px;
-            padding-top: 20px;
-        }
-
-        .gitRight p {
-            font-size: 18px;
-
-            line-height: 40px;
-        }
-
-        .new-c .ExtensibleLeft img {
-            width: 300px;
-            /* padding-top: 20px; */
-        }
-
-        /* js添加 */
-        .Extensible_a {
-            transform: scale(1.1, 1.1);
-            /* padding-top: 20px; */
-            transition: all 0.25s;
-        }
-
-        .Extensible_b {
-            transform: scale(1, 1);
-            /* padding-top: 20px; */
-            transition: all 0.25s;
-        }
-
-        .ExtensibleRight h3 {
-            font-size: 25px;
-            font-weight: lighter;
-        }
-
-        .ExtensibleLeft p {
-            font-size: 18px;
-
-            line-height: 40px;
-        }
-
-        .news-e {
-            background-color: rgb(245, 245, 245);
-        }
-
-
-
-        .DeployRight h3 {
-            font-size: 25px;
-            font-weight: lighter;
-        }
-
-        .DeployRight p {
-            font-size: 18px;
-
-            line-height: 40px;
-        }
-
-        .new-c .DeployLeft img {
-            width: 300px;
-            padding-top: 20px;
-        }
-
-
-        @media (max-width: 768px) {
-
-            /* .new-diandao{
-                display: flex;
-                flex-direction: row-reverse;
-            } */
-            .new-c .MeetLeft img {
-                display: block;
-                width: 300px;
-                margin: 0 auto;
-            }
-
-            .new-c .PrintLeft img {
-                display: block;
-                width: 300px;
-                margin: 0 auto;
-                /* clear:both; */
-            }
-
-            .gitLeft img {
-                display: block;
-                width: 300px;
-                margin: 0 auto;
-                /* border: 1px solid red; */
-            }
-
-            .new-c .ExtensibleLeft img {
-                display: block;
-                width: 300px;
-                margin: 0 auto;
-            }
-
-            .new-c .DeployLeft img {
-                display: block;
-                width: 300px;
-                margin: 0 auto;
-            }
-
-        }
-    </style>
+    <link rel="stylesheet" href="./css/news.css">
+    
     <!-- 文字轮播css -->
-    <style>
-        .wenzhi_box {
-            background-color: rgb(245, 245, 245);
-
-        }
-
-        .wenzhic {
-            margin: 0 auto;
-
-        }
-
-        .wenzhiLeft {
-            width: 50%;
-            height: 50%;
-            /* background-color: pink; */
-            margin-top: 110px;
-            font-size: 30px;
-            text-align: right;
-
-        }
-
-        /* ------------------ */
-        .news-scroll {
-            background: none;
-        }
-
-        .news-scroll .scroll-box {
-            width: 300px;
-            border-radius: 0;
-            box-shadow: none;
-            background-color: rgb(245, 245, 245);
-
-        }
-
-        .roll ul li {
-            text-align: center;
-        }
-
-        .roll ul li a {
-            padding: 0;
-            color: rgba(0, 0, 0, 0.781);
-            font-size: 30px;
-        }
-
-        .tijiao {
-            width: 200px;
-            height: 50px;
-            margin: 50px auto;
-            background-color: rgb(0, 91, 164);
-            color: rgb(250, 246, 246);
-            text-align: center;
-            font-size: 25px;
-            padding-top: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="./css/wengzilunbo.css">
+    
     <!-- 下载版本 -->
+    <link rel="stylesheet" href="./css/vscode-scroll.css">
 
 </head>
 
@@ -738,20 +249,21 @@
                                         <div class="media-left">
                                             <a href="#">
                                                 <img class="media-object img-circle"
-                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/Una.jpg"
+                                                    src="https://pbs.twimg.com/profile_images/1222954723470233600/KYXsxLpi_bigger.jpg"
                                                     alt="..." />
                                             </a>
                                         </div>
                                         <div class="media-body">
                                             <h5 class="media-heading">
-                                                Una Kravets<small>@text</small>
+                                                Jonathan Dunlap<small>@jadbox</small>
                                                 <small class="glyphicon glyphicon-remove-sign pull-right"></small>
                                             </h5>
                                             <p>
-                                                VS @code does so many things right. I’m constantly
-                                                impressed by the UX, and customizing workspace / user
-                                                preferences is no exception. 🙌🏼💯 It just keeps
-                                                getting better ❤️
+                                                
+                                             Awesome - VS Code will have deep remote development: you can 
+                                             connect to a container running
+                                                a different OS and be able to use any VS Code plugins/linting/debugging
+                                             for that environment. 🔥🔥🔥
                                             </p>
                                         </div>
                                     </div>
@@ -761,19 +273,20 @@
                                         <div class="media-left">
                                             <a href="#">
                                                 <img class="media-object img-circle"
-                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/Una.jpg"
-                                                    alt="..." />
+                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/PKodmad.jpg"
+                                                    alt="" />
                                             </a>
                                         </div>
                                         <div class="media-body">
                                             <h5 class="media-heading">
-                                                Una Kravets<small>@text</small>
+                                                Pavithra Kodmad<small>@PKodmad</small>
                                             </h5>
                                             <p>
-                                                VS @code does so many things right. I’m constantly
-                                                impressed by the UX, and customizing workspace / user
-                                                preferences is no exception. 🙌🏼💯 It just keeps
-                                                getting better ❤️
+                                                                                            
+                                                                                VS Code is my most used and favorite editor. 
+                                                            I love being able to customize the editor - changing the layout, 
+                                            the icons, fonts and color scheme is so easy!
+                                                                                        
                                             </p>
                                         </div>
                                     </div>
@@ -785,19 +298,18 @@
                                         <div class="media-left">
                                             <a href="#">
                                                 <img class="media-object img-circle"
-                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/Una.jpg"
+                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/MrDarrenV.jpg"
                                                     alt="..." />
                                             </a>
                                         </div>
                                         <div class="media-body">
                                             <h5 class="media-heading">
-                                                Una Kravets<small>@text</small>
+                                                Darren <small>@MrDarrenV</small>
                                             </h5>
                                             <p>
-                                                VS @code does so many things right. I’m constantly
-                                                impressed by the UX, and customizing workspace / user
-                                                preferences is no exception. 🙌🏼💯 It just keeps
-                                                getting better ❤️
+                                                
+                                                Just as I thought @code couldn't get better, out comes its Remote Development plugins 
+                                                in the Stable version that let you remote into containers as a dev environment! 😍
                                             </p>
                                         </div>
                                     </div>
@@ -807,20 +319,20 @@
                                         <div class="media-left">
                                             <a href="#">
                                                 <img class="media-object img-circle"
-                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/Una.jpg"
+                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/cassidoo.jpg"
                                                     alt="..." />
                                             </a>
                                         </div>
                                         <div class="media-body">
                                             <h5 class="media-heading">
-                                                Una Kravets<small>@text</small>
+                                                Cassidy Williams<small>@cassidoo</small>
                                                 <small class="glyphicon glyphicon-remove-sign pull-right"></small>
                                             </h5>
                                             <p>
-                                                VS @code does so many things right. I’m constantly
-                                                impressed by the UX, and customizing workspace / user
-                                                preferences is no exception. 🙌🏼💯 It just keeps
-                                                getting better ❤️
+                                                 
+                                                I was a vim fan, but then discovered VS Code's Vim plugin,
+                                                which lets me add in my vim keybindings. 
+                                                I can maintain my coding style without having to compromise on speed.
                                             </p>
                                         </div>
                                     </div>
@@ -830,19 +342,19 @@
                                         <div class="media-left">
                                             <a href="#">
                                                 <img class="media-object img-circle"
-                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/Una.jpg"
+                                                    src="https://code.visualstudio.com/assets/socialproof/twitterprofiles/lauragift21.jpg"
                                                     alt="..." />
                                             </a>
                                         </div>
                                         <div class="media-body">
                                             <h5 class="media-heading">
-                                                Una Kravets<small>@text</small>
+                                                Gift Egwuenu<small>@lauragift21</small>
                                             </h5>
                                             <p>
-                                                VS @code does so many things right. I’m constantly
-                                                impressed by the UX, and customizing workspace / user
-                                                preferences is no exception. 🙌🏼💯 It just keeps
-                                                getting better ❤️
+                                                 
+                                                I love @code The built-in markdown previewer is awesome 
+                                                and the plugin system allows me to use GitLens,
+                                                 which makes my workflow so much easier.
                                             </p>
                                         </div>
                                     </div>
@@ -1109,29 +621,116 @@
         </div>
     </div>
     <!-- 下载版本 -->
-    <!-- <div class="banben">
-        <div class="banben1">
-            <img src="https://code.visualstudio.com/assets/images/windows-logo.png" alt="">
-            <div class="btn-group">
-                <button type="button" id="y_button1" class="btn btn-danger">
-                    <h4>Download for Windows</h4>
-                    <span>Stable Build</span>
-                </button>
-                <button type="button" id="y_button2" class="btn btn-danger dropdown-toggle " data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <span class="caret"></span>
-                    <span class="sr-only">Toggle Dropdown</span>
-                </button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                </ul>
-            </div>
-        </div>
-    </div> -->
+    <div class="container"> 
+        <div class="row">
+             <div class="banben1 col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <p>
+                 <img
+                   src="https://code.visualstudio.com/assets/images/windows-logo.png"
+                   alt=""
+                 />
+               </p>
+               <div class="ban-dian mi">
+                 <img
+                   src="https://code.visualstudio.com/assets/icons/download.svg"
+                   alt=""
+                 />
+   
+                 Windows
+                 <br />
+                 <small> 7, 8, 10</small>
+               </div>
+               <div class="zhushi">
+                 <span class="zhushi_s">
+                   User Installer
+                   <br />
+                   System Installer
+                   <br />
+                   .zip
+                 </span>
+   
+                 <span class="zhushi_a">
+                   <a>64 bit</a> <a>32 bit</a>
+                   <br />
+                   <a>64 bit</a> <a>32 bit</a>
+                   <br />
+   
+                   <a>64 bit</a> <a>32 bit</a></span
+                 >
+               </div>
+             </div>
+             <div class="banben2 col-xs-12 col-sm-6 col-md-4 col-lg-4">
+               <p>
+                 <img
+                   src="https://code.visualstudio.com/assets/images/linux-logo.png"
+                   alt=""
+                 />
+               </p>
+               <div class="ban-dian2 mi">
+                 <div class="left ">
+                   <img
+                     src="https://code.visualstudio.com/assets/icons/download.svg"
+                     alt=""
+                   />
+                   .deb<br />
+                   <small> Debian, Ubuntu</small>
+                 </div>
+                 <div class="right">
+                   <img
+                     src="https://code.visualstudio.com/assets/icons/download.svg"
+                     alt=""
+                   />
+                   .rpm
+                   <br />
+                   <small> Red Hat, Fedora, SUSE</small>
+                 </div>
+               </div>
+               <div class="zhushi2">
+                 <span class="zhushi_s2">
+                   .deb
+                   <br />
+                   .rpm
+                   <br />
+                   .tar.gz
+                 </span>
+   
+                 <span class="zhushi_a2">
+                   <a>64 bit</a>
+                   <br />
+                   <a>64 bit</a>
+                   <br />
+   
+                   <a>64 bit</a>
+                 </span>
+               </div>
+               <a class="c1"> Snap Store </a>
+             </div>
+             <div class="banben3 col-xs-12 col-sm-12 col-md-4 col-lg-4">
+               <p>
+                 <img
+                   src="https://code.visualstudio.com/assets/images/apple-logo.svg"
+                   alt=""
+                 />
+               </p>
+               <div class="ban-dian3 mi">
+                 <img
+                   src="https://code.visualstudio.com/assets/icons/download.svg"
+                   alt=""
+                 />
+   
+                 Mac
+   
+                 <br />
+                 <small> macOS 10.10+</small>
+               </div>
+             </div>
+           </div>
+         
+         </div>
+   
+       </div>
+    <!-- 下载版本结束 -->
+
     <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
     <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->

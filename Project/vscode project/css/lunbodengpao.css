@@ -1,0 +1,61 @@
+/* 灯泡 轮播css */
+
+.media {
+    /* border: 1px solid red; */
+    line-height: 30px;
+    height: 370px;
+    padding-top: 130px;
+}
+
+.value dl {
+    /* background: lightblue; */
+    text-align: center;
+}
+
+.value dl dt {
+    width: 50px;
+    height: 50px;
+    background: url("https://code.visualstudio.com/assets/icons/valueprops-top-sprite.svg");
+    display: inline-block;
+}
+
+.value dl:hover {
+    background: lightgray;
+}
+
+.value dl:hover dt {
+    background-position-y: -53px;
+}
+
+.value dl:nth-child(2) dt {
+    background-position-x: -50px;
+}
+
+.value dl:nth-child(3) dt {
+    background-position-x: -100px;
+}
+
+.value dl:nth-child(4) dt {
+    background-position-x: -156px;
+}
+
+.value dl dd {}
+
+.v-banner {
+    background: lightgray;
+}
+
+.v-banner .media img {
+    width: 64px;
+    height: 64px;
+}
+
+.v-banner #xxx .carousel-control {
+    background: none;
+    width: auto;
+}
+
+.biaoShi dl {
+    margin: 0;
+    padding: 20px 0;
+}
